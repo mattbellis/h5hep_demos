@@ -88,7 +88,7 @@ for i in range(0,nevents):
         print(i)
 
 
-    njet[0] = np.random.randint(15)
+    njet[0] = np.random.randint(16)
     for n in range(njet[0]):
         jetpx[n] = 300*beta(2,9)
         jetpy[n] = 300*beta(2,9)
@@ -97,7 +97,7 @@ for i in range(0,nevents):
         jete[n] = calc_energy(mass,jetpx[n],jetpy[n],jetpz[n])
         jetbtag[n] = np.random.random()
 
-    nmuon[0] = np.random.randint(15)
+    nmuon[0] = np.random.randint(16)
     for n in range(nmuon[0]):
         muonpx[n] = 300*beta(2,9)
         muonpy[n] = 300*beta(2,9)
@@ -106,7 +106,7 @@ for i in range(0,nevents):
         muone[n] = calc_energy(mass,muonpx[n],muonpy[n],muonpz[n])
         muonq[n] = 2*np.random.randint(2) - 1
 
-    nelectron[0] = np.random.randint(15)
+    nelectron[0] = np.random.randint(16)
     for n in range(nelectron[0]):
         electronpx[n] = 300*beta(2,9)
         electronpy[n] = 300*beta(2,9)
@@ -115,7 +115,7 @@ for i in range(0,nevents):
         electrone[n] = calc_energy(mass,electronpx[n],electronpy[n],electronpz[n])
         electronq[n] = 2*np.random.randint(2) - 1
 
-    nphoton[0] = np.random.randint(15)
+    nphoton[0] = np.random.randint(16)
     for n in range(nphoton[0]):
         photonpx[n] = 300*beta(2,9)
         photonpy[n] = 300*beta(2,9)
