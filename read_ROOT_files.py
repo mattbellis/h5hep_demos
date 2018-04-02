@@ -28,6 +28,9 @@ energies = []
 for n in range (nev):
     chain.GetEntry(n)
 
+    if n%10000==0:
+        print(n)
+
     '''
     print(tree.nmuon)
 

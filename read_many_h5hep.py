@@ -30,7 +30,7 @@ for filename in filenames:
 
     energies += data['jet/e'].tolist()
 
-    '''
+    #'''
     for i in range(0,nevents):
 
         if i%10000==0:
@@ -41,7 +41,7 @@ for filename in filenames:
         energy = event['jet/e']
 
         energies += energy.tolist()
-    '''
+    #'''
 
     del data
     del event
