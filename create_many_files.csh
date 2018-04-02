@@ -1,8 +1,8 @@
-@ i = 0
+@ i = 10
 
-while ( $i < 10 )
-    foreach nevents ( 1000 10000 100000 )
-    #foreach nevents ( 1000 )
+while ( $i < 30 )
+    #foreach nevents ( 1000 10000 100000 )
+    foreach nevents ( 100000 )
 
         set tag = `printf "%03d" $i`
 
@@ -12,11 +12,11 @@ while ( $i < 10 )
     @ i += 1
 end
 
-@ i = 0
+@ i = 10
 
-while ( $i < 10 )
-    foreach nevents ( 1000 10000 100000 )
-    #foreach nevents ( 1000 )
+while ( $i < 30 )
+    #foreach nevents ( 1000 10000 100000 )
+    foreach nevents ( 100000 )
 
         set tag = `printf "%03d" $i`
 

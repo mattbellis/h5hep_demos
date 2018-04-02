@@ -28,9 +28,9 @@ for filename in filenames:
     print("nevents: ",nevents)
     print(type(data),type(event))
 
-    #energies += data['jet/e'].tolist()
+    energies += data['jet/e'].tolist()
 
-    #'''
+    '''
     for i in range(0,nevents):
 
         if i%10000==0:
@@ -41,7 +41,7 @@ for filename in filenames:
         energy = event['jet/e']
 
         energies += energy.tolist()
-    #'''
+    '''
 
     del data
     del event
@@ -49,7 +49,7 @@ for filename in filenames:
 
 print(len(energies))
 
-plt.figure()
-plt.hist(energies,bins=100,range=(0,500))
+#plt.figure()
+#plt.hist(energies,bins=100,range=(0,500))
 
 #plt.show()
