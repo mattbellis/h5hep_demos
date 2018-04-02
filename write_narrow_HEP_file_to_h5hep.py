@@ -37,6 +37,10 @@ nevents = 1000
 if len(sys.argv)>1:
     nevents = int(sys.argv[1])
 
+tag = None
+if len(sys.argv)>2:
+    tag = sys.argv[2]
+
 #print(data)
 #print(event)
 
@@ -105,9 +109,12 @@ for i in range(0,nevents):
         
     hp.fill(data,event)
 
-print("Writing the file...")
 #hdfile = write_to_file('output.hdf5',data)
 name = 'HEP_narrow_file_n%d.hdf5' % (nevents)
+if tag is not None:
+    name = 'HEP_narrow_file_tag%s_n%d.hdf5' % (tag,nevents)
+print("Writing the file...%s" % (name)) 
+
 hdfile = hp.write_to_file(name,data,comp_type='gzip',comp_opts=9)
 #'''
 

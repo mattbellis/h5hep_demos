@@ -19,8 +19,16 @@ nevents = 1000
 if len(sys.argv)>1:
     nevents = int(sys.argv[1])
 
+tag = None
+if len(sys.argv)>2:
+    tag = sys.argv[2]
+
 # Create the file and "cd" into it.
-name = 'HEP_narrow_file_ROOT_n%d.root' % (nevents)
+name = 'HEP_narrow_file_n%d.hdf5' % (nevents)
+if tag is not None:
+        name = 'HEP_narrow_file_ROOT_tag%s_n%d.root' % (tag,nevents)
+print("Opening the ROOT file for writing the file...%s" % (name))
+#name = 'HEP_narrow_file_ROOT_n%d.root' % (nevents)
 f = ROOT.TFile(name, "RECREATE")
 f.cd()
 
