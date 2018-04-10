@@ -1,7 +1,7 @@
 @ i = 27
 
 while ( $i < 30 )
-    foreach nevents ( 1000 10000 100000 1000000 )
+    foreach nevents ( 1000 10000 100000 )
         #foreach nevents ( 100000 )
 
         set tag = `printf "%03d" $i`
@@ -15,7 +15,7 @@ end
 @ i = 27
 
 while ( $i < 30 )
-    foreach nevents ( 1000 10000 100000 1000000 )
+    foreach nevents ( 1000 10000 100000 )
         #foreach nevents ( 100000 )
 
         set tag = `printf "%03d" $i`

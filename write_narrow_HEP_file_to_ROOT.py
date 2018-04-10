@@ -134,7 +134,8 @@ for i in range(0,nevents):
     tree.Fill()
 
 # Go back "into" the file and close and write it.
-print("Writing the file...")
+#print("Writing the file...")
+print("Writing the file...%s" % (name)) 
 f.cd()
 f.Write()
 f.Close()
